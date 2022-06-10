@@ -16,6 +16,8 @@ use `fl2k_file -s 14318181 outfile.s8` to pipe the file out
 
 910 for NTSC, 1135 for PAL in the `line_length` variable block
 
+525 for NTSC, 625 for PAL in the `lines_per_frame` variable block
+
 PAL isn't quite rigth, probably need to account for a few missing samples, screen jumps
 
 fl2k_file only uses the `red` vga signal and ground. 
