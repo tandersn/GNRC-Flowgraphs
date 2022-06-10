@@ -39,7 +39,7 @@ blocks:
     comment: '910 NTSC
 
       1135 PAL'
-    value: '1135'
+    value: '910'
   states:
     bus_sink: false
     bus_source: false
@@ -172,7 +172,7 @@ blocks:
     alias: ''
     append: 'False'
     comment: ''
-    file: /laserdisc/captures/mikro.s8
+    file: outfile.s8
     type: byte
     unbuffered: 'False'
     vlen: '1'
@@ -190,7 +190,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: /laserdisc/captures/out/mikro_long_bird.tbc
+    file: infile.tbc
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -539,3 +539,4 @@ connections:
 
 metadata:
   file_format: 1
+  grc_version: 3.10.2.0
