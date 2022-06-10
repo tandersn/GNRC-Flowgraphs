@@ -6,7 +6,7 @@ This GNRC flowgraph takes in a .tbc file from ld-decode or vhs-decode (vhs-decod
 
 You'll need osmo-fl2k and gnu radio companion packages installed and all dependencies
 
-Open the flowgraph, edit the paht field of 'file source block' and 'file sink block'
+Open the flowgraph, edit the path field of 'file source block' and 'file sink block'
 
 run the graph
 
