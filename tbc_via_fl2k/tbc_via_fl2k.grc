@@ -47,6 +47,20 @@ blocks:
     coordinate: [376, 12.0]
     rotation: 0
     state: true
+- name: lines_per_frame
+  id: variable
+  parameters:
+    comment: '525 NTSC
+
+      625 PAL'
+    value: '525'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [480, 12.0]
+    rotation: 0
+    state: true
 - name: samp_rate
   id: variable
   parameters:
@@ -295,7 +309,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    lengths: (525, 1)
+    lengths: (lines_per_frame, 1)
     maxoutbuf: '0'
     minoutbuf: '0'
     num_outputs: '2'
