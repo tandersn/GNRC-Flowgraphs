@@ -22,4 +22,8 @@ fl2k_file only uses the `red` vga signal and ground.
 
 for the purposes of this flowgraph, the "sample_rate" doesn't do anything but determine how much compute resources are used. 
 
+## In action
+
+https://www.youtube.com/watch?v=4cjxmLpXbyE
+
  
