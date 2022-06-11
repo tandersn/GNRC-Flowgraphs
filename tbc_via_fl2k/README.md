@@ -26,6 +26,12 @@ for the purposes of this flowgraph, the "sample_rate" doesn't do anything but de
 
 ## In action
 
-https://www.youtube.com/watch?v=4cjxmLpXbyE
+NTSC https://www.youtube.com/watch?v=4cjxmLpXbyE
 
- 
+PAL https://www.youtube.com/watch?v=MPpJ179-ZC4
+
+## Refrecnces
+
+https://www.rtl-sdr.com/osmo-fl2k-a-tx-only-sdr-hacked-from-commodity-5-usb-to-vga-adapters-demos-available-for-transmitting-wbfm-gsm-umts-gps/
+
+https://osmocom.org/projects/osmo-fl2k/wiki/Osmo-fl2k 
