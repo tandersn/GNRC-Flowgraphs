@@ -78,10 +78,10 @@ class colordecode(gr.top_block, Qt.QWidget):
         ##################################################
         self.disp_lines = disp_lines = 526
         self.disp_columns = disp_columns = 910
-        self.view_lines = view_lines = 2
-        self.start_line = start_line = 24
+        self.view_lines = view_lines = 44
+        self.start_line = start_line = 0
         self.samp_rate = samp_rate = 14318181
-        self.repeat_times = repeat_times = 300
+        self.repeat_times = repeat_times = 20
         self.PAL_xtra = PAL_xtra = int(disp_columns)+int(disp_lines/600)
 
         ##################################################
