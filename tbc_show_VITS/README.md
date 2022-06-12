@@ -24,3 +24,14 @@ where width is NTSC 910 and height is view_lines * repeat_times.
 
 for the purposes of this flowgraph, the "sample_rate" doesn't really do anything but determine how much compute resources are used. 
 
+
+## Examples:
+
+NTSC showing line 0 thru 44 repeated 20 times:
+
+![pic1](https://raw.githubusercontent.com/tandersn/GNRC-Flowgraphs/main/z_images/VITS_0_THRU_44_x20.png)
+
+NTSC showing line 25 thru 26 repeated 300 times:
+
+![pic1](https://raw.githubusercontent.com/tandersn/GNRC-Flowgraphs/main/z_images/VITS_25_THRU_26_x300.png)
+
