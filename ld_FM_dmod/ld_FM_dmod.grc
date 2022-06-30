@@ -61,7 +61,7 @@ blocks:
     bus_structure: null
     coordinate: [200, 196.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: analog_const_source_x_0_0
   id: analog_const_source_x
   parameters:
@@ -78,7 +78,7 @@ blocks:
     bus_structure: null
     coordinate: [336, 252.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: analog_const_source_x_1
   id: analog_const_source_x
   parameters:
@@ -205,7 +205,7 @@ blocks:
     bus_structure: null
     coordinate: [520, 168.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: blocks_file_source_0
   id: blocks_file_source
   parameters:
@@ -227,7 +227,7 @@ blocks:
     bus_structure: null
     coordinate: [16, 116.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_float_to_short_0
   id: blocks_float_to_short
   parameters:
@@ -314,7 +314,7 @@ blocks:
     bus_structure: null
     coordinate: [392, 152.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: blocks_sub_xx_1
   id: blocks_sub_xx
   parameters:
@@ -365,6 +365,24 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [224, 152.0]
+    rotation: 0
+    state: disabled
+- name: blocks_wavfile_source_0
+  id: blocks_wavfile_source
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: "wav file source seems\nto be able to read flac \nfiles..."
+    file: /home/tandersn/DISK/laserdisc/captures/spinning/stack/4300d8.flac
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nchan: '1'
+    repeat: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [312, 20.0]
     rotation: 0
     state: true
 - name: hilbert_fc_0
@@ -605,13 +623,13 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    display_height: '1024'
-    display_width: '1280'
+    display_height: '1050'
+    display_width: '1271'
     fps: '30'
     height: '525'
     num_channels: '1'
     type: short
-    width: '1271'
+    width: round(samp_rate/525/29.97/2)
   states:
     bus_sink: false
     bus_source: false
@@ -641,6 +659,8 @@ connections:
 - [blocks_sub_xx_1, '0', rational_resampler_xxx_0, '0']
 - [blocks_throttle_0, '0', blocks_null_sink_0, '0']
 - [blocks_uchar_to_float_0, '0', blocks_sub_xx_0, '0']
+- [blocks_wavfile_source_0, '0', blocks_throttle_0, '0']
+- [blocks_wavfile_source_0, '0', hilbert_fc_0, '0']
 - [hilbert_fc_0, '0', band_pass_filter_0, '0']
 - [rational_resampler_xxx_0, '0', analog_rail_ff_0, '0']
 
