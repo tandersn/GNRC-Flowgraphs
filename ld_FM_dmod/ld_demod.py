@@ -192,7 +192,7 @@ class ld_demod(gr.top_block, Qt.QWidget):
         self.blocks_sub_xx_0 = blocks.sub_ff(1)
         self.blocks_null_sink_0_0 = blocks.null_sink(gr.sizeof_float*1)
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_float*1)
-        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_ff(165)
+        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_ff(200)
         self.blocks_float_to_short_0 = blocks.float_to_short(1, 1)
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_char*1, '/laserdisc/captures/movies_and_demos/shortestdisc.r8', False, 0, 0)
         self.blocks_file_source_0.set_begin_tag(pmt.PMT_NIL)
@@ -202,14 +202,15 @@ class ld_demod(gr.top_block, Qt.QWidget):
             firdes.band_pass(
                 1,
                 samp_rate,
-                3.6e6,
-                13.6e6,
-                1000000,
+                3.1e6,
+                13.1e6,
+                500e3,
                 window.WIN_HAMMING,
                 6.76))
+        self.analog_rail_ff_0 = analog.rail_ff(1, 255)
         self.analog_quadrature_demod_cf_0 = analog.quadrature_demod_cf(samp_rate/(2*math.pi*1.7e6))
-        self.analog_fm_deemph_0 = analog.fm_deemph(fs=samp_rate, tau=75e-8)
-        self.analog_const_source_x_1_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, 734)
+        self.analog_fm_deemph_0 = analog.fm_deemph(fs=samp_rate, tau=35e-8)
+        self.analog_const_source_x_1_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, 888)
         self.analog_const_source_x_1 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, 0)
         self.analog_const_source_x_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, 127)
         self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, 127)
@@ -224,6 +225,8 @@ class ld_demod(gr.top_block, Qt.QWidget):
         self.connect((self.analog_const_source_x_1_0, 0), (self.blocks_sub_xx_1, 1))
         self.connect((self.analog_fm_deemph_0, 0), (self.blocks_multiply_const_vxx_0, 0))
         self.connect((self.analog_quadrature_demod_cf_0, 0), (self.analog_fm_deemph_0, 0))
+        self.connect((self.analog_rail_ff_0, 0), (self.blocks_float_to_short_0, 0))
+        self.connect((self.analog_rail_ff_0, 0), (self.blocks_null_sink_0_0, 0))
         self.connect((self.band_pass_filter_0, 0), (self.analog_quadrature_demod_cf_0, 0))
         self.connect((self.blocks_divide_xx_0, 0), (self.blocks_throttle_0, 0))
         self.connect((self.blocks_divide_xx_0, 0), (self.hilbert_fc_0, 0))
@@ -237,8 +240,7 @@ class ld_demod(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_throttle_0, 0), (self.blocks_null_sink_0, 0))
         self.connect((self.blocks_uchar_to_float_0, 0), (self.blocks_sub_xx_0, 0))
         self.connect((self.hilbert_fc_0, 0), (self.band_pass_filter_0, 0))
-        self.connect((self.rational_resampler_xxx_0, 0), (self.blocks_float_to_short_0, 0))
-        self.connect((self.rational_resampler_xxx_0, 0), (self.blocks_null_sink_0_0, 0))
+        self.connect((self.rational_resampler_xxx_0, 0), (self.analog_rail_ff_0, 0))
 
 
     def closeEvent(self, event):
@@ -255,7 +257,7 @@ class ld_demod(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.analog_quadrature_demod_cf_0.set_gain(self.samp_rate/(2*math.pi*1.7e6))
-        self.band_pass_filter_0.set_taps(firdes.band_pass(1, self.samp_rate, 3.6e6, 13.6e6, 1000000, window.WIN_HAMMING, 6.76))
+        self.band_pass_filter_0.set_taps(firdes.band_pass(1, self.samp_rate, 3.1e6, 13.1e6, 500e3, window.WIN_HAMMING, 6.76))
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
 
