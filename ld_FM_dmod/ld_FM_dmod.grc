@@ -102,7 +102,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    const: '4.4'
+    const: '734'
     maxoutbuf: '0'
     minoutbuf: '0'
     type: float
@@ -110,7 +110,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1296, 252.0]
+    coordinate: [1208, 356.0]
     rotation: 180
     state: enabled
 - name: analog_fm_deemph_0
@@ -155,9 +155,9 @@ blocks:
     comment: ''
     decim: '1'
     gain: '1'
-    high_cutoff_freq: 13.5e6
+    high_cutoff_freq: 13.6e6
     interp: '1'
-    low_cutoff_freq: 3.5e6
+    low_cutoff_freq: 3.6e6
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: samp_rate
@@ -243,7 +243,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1032, 172.0]
+    coordinate: [1200, 244.0]
     rotation: 180
     state: enabled
 - name: blocks_null_sink_0
@@ -313,7 +313,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1200, 168.0]
+    coordinate: [1080, 272.0]
     rotation: 180
     state: enabled
 - name: blocks_throttle_0
@@ -462,7 +462,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1136, 308.0]
+    coordinate: [1128, 156.0]
     rotation: 0
     state: true
 - name: qtgui_time_sink_x_0_0
@@ -608,18 +608,18 @@ connections:
 - [analog_const_source_x_0_0, '0', blocks_divide_xx_0, '1']
 - [analog_const_source_x_1, '0', qtgui_time_sink_x_0_0, '1']
 - [analog_const_source_x_1_0, '0', blocks_sub_xx_1, '1']
-- [analog_fm_deemph_0, '0', blocks_sub_xx_1, '0']
+- [analog_fm_deemph_0, '0', blocks_multiply_const_vxx_0, '0']
 - [analog_quadrature_demod_cf_0, '0', analog_fm_deemph_0, '0']
 - [band_pass_filter_0, '0', analog_quadrature_demod_cf_0, '0']
 - [blocks_divide_xx_0, '0', blocks_throttle_0, '0']
 - [blocks_divide_xx_0, '0', hilbert_fc_0, '0']
 - [blocks_file_source_0, '0', blocks_uchar_to_float_0, '0']
 - [blocks_float_to_short_0, '0', video_sdl_sink_0, '0']
-- [blocks_multiply_const_vxx_0, '0', qtgui_time_sink_x_0_0, '0']
-- [blocks_multiply_const_vxx_0, '0', rational_resampler_xxx_0, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_sub_xx_1, '0']
+- [blocks_multiply_const_vxx_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_sub_xx_0, '0', blocks_divide_xx_0, '0']
-- [blocks_sub_xx_1, '0', blocks_multiply_const_vxx_0, '0']
-- [blocks_sub_xx_1, '0', qtgui_time_sink_x_0, '0']
+- [blocks_sub_xx_1, '0', qtgui_time_sink_x_0_0, '0']
+- [blocks_sub_xx_1, '0', rational_resampler_xxx_0, '0']
 - [blocks_throttle_0, '0', blocks_null_sink_0, '0']
 - [blocks_uchar_to_float_0, '0', blocks_sub_xx_0, '0']
 - [hilbert_fc_0, '0', band_pass_filter_0, '0']
