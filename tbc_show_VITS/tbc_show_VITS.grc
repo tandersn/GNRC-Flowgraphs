@@ -77,7 +77,7 @@ blocks:
   id: variable
   parameters:
     comment: "number of times \nto repeat each\nline"
-    value: '20'
+    value: '1'
   states:
     bus_sink: false
     bus_source: false
@@ -107,7 +107,7 @@ blocks:
       start display at next
 
       line.'
-    value: '0'
+    value: '50'
   states:
     bus_sink: false
     bus_source: false
@@ -121,7 +121,7 @@ blocks:
     comment: 'numbre of lines
 
       to show'
-    value: '44'
+    value: '450'
   states:
     bus_sink: false
     bus_source: false
@@ -322,7 +322,7 @@ blocks:
     comment: 'edit to set
 
       input TBC file'
-    file: /laserdisc/captures/movies_and_demos/out/4300D_rfTap_100IOTopa657_13+_grn54c2_16x33.75_bi50t_dxvx2_fan_50k150ciCXlvladj_critSe7enC47.u16.tbc
+    file: /laserdisc/captures/snapped/out/475_fromMyIAref.tbc
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
