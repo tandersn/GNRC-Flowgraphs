@@ -95,7 +95,7 @@ blocks:
     bus_structure: null
     coordinate: [840, 292.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: analog_const_source_x_1_0
   id: analog_const_source_x
   parameters:
