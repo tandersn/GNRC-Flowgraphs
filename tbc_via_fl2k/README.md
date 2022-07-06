@@ -22,6 +22,10 @@ fl2k_file only uses the `red` vga signal and ground.
 
 for the purposes of this flowgraph, the "sample_rate" doesn't do anything but determine how much compute resources are used. 
 
+My singular tests with, one machine, and one DAC dongle, and one guitar...  indicate that somewhere around 12mhz is the 
+highest rate for USB2 + fl2k.
+
+
 ## In action
 
 NTSC https://www.youtube.com/watch?v=4cjxmLpXbyE
