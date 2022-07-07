@@ -1,6 +1,10 @@
 # TBC_VIA_FL2K
 
-This GNRC flowgraph takes in a .tbc file from ld-decode or vhs-decode (vhs-decode would need to have the Y+C combined version of the .tbc file) and converts it to signed 8 bit and discards the extra line. I tried piping the flowgraph output direclty to fl2k_file but it couldn't keep up on the machine i was using. 
+This GNRC flowgraph takes in a .tbc file from ld-decode or a combined vhs-decode tbc file,  and converts it to signed 8 bit and discards the extra line. I tried piping the flowgraph output direclty to fl2k_file but it couldn't keep up on the machine i was using. 
+
+# VHS-TBC_VIA_FL2K
+
+This GNRC flowgraph takes in the 2 .tbc files from vhs-decode and converts it to signed 8 bit and discards the extra line (credit to Itewreed#2179@discord who contributed to this).
 
 ## Steps to use:
 
@@ -22,8 +26,24 @@ fl2k_file only uses the `red` vga signal and ground.
 
 for the purposes of this flowgraph, the "sample_rate" doesn't do anything but determine how much compute resources are used. 
 
-My singular tests with, one machine, and one DAC dongle, and one guitar...  indicate that somewhere around 12mhz is the 
-highest rate for USB2 + fl2k.
+My tests with USB2 connection, indicate that there are some pretty big variances on how high you can acheive connected with 
+USB2.0. My 1st machine was around 12mhz, 12.5mhz would not work. However my second machine, 14,318,181mhz worked, but PAL
+~17,734,400 would not. The highest rate for USB2 + fl2k seems to vary.
+
+## Troubleshooting:
+
+The error about allocating the memory buffer is normal, just do what it says: 
+  echo 0 > /sys/module/usbcore/parameters/usbfs_memory_mb
+
+If you get an error like this:
+  libusb: error [submit_bulk_transfer] submiturb failed error -1 errno=2
+
+Then you need to `apt remove osmo-fl2k` and follow the directions on the osmo-fl2k wiki on how to build it yourself. I 
+suspect it is a kernel headers issue? Link below.
+
+If your device won't recognize the signal (or it isn't stable), you can try and use the `high gain` flowgraph. This graph
+adjusts the values so the cvbs signal uses the full range of the DAC. This could have unintended side effects (clipping)
+as the values were based on a particular TBC file I was using at the time.
 
 
 ## In action
