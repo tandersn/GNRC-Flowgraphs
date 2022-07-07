@@ -14,7 +14,8 @@ Open the flowgraph, edit the path field of 'file source block' and 'file sink bl
 
 run the graph
 
-use `fl2k_file -s 14318181 outfile.s8` to pipe the file out
+use `fl2k_file -s 14318181 outfile.s8` to pipe the file out for NTSC, and `fl2k_file -s 17734475 outfile.s8` to pipe the file out for PAL
+
 
 ## Notes:
 
@@ -33,10 +34,10 @@ USB2.0. My 1st machine was around 12mhz, 12.5mhz would not work. However my seco
 ## Troubleshooting:
 
 The error about allocating the memory buffer is normal, just do what it says: 
-  echo 0 > /sys/module/usbcore/parameters/usbfs_memory_mb
+	echo 0 > /sys/module/usbcore/parameters/usbfs_memory_mb
 
 If you get an error like this:
-  libusb: error [submit_bulk_transfer] submiturb failed error -1 errno=2
+	libusb: error [submit_bulk_transfer] submiturb failed error -1 errno=2
 
 Then you need to `apt remove osmo-fl2k` and follow the directions on the osmo-fl2k wiki on how to build it yourself. I 
 suspect it is a kernel headers issue? Link below.
