@@ -74,7 +74,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [792, 12.0]
+    coordinate: [872, 4.0]
     rotation: 0
     state: true
 - name: variable_qtgui_range_0
@@ -91,19 +91,19 @@ blocks:
     start: '-10'
     step: '.05'
     stop: '1'
-    value: '-7.36'
+    value: '-7.38'
     widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [880, 532.0]
+    coordinate: [560, 4.0]
     rotation: 0
     state: true
 - name: variable_qtgui_range_1
   id: variable_qtgui_range
   parameters:
-    comment: 5.5 for spiderman and hercules and soldiers
+    comment: "5.5 for spiderman \nand hercules and soldiers"
     gui_hint: ''
     label: GAIN
     min_len: '200'
@@ -112,13 +112,13 @@ blocks:
     start: '-10'
     step: '.1'
     stop: '10'
-    value: '5.5'
+    value: '5.6'
     widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1056, 532.0]
+    coordinate: [712, 4.0]
     rotation: 0
     state: true
 - name: analog_agc3_xx_0
@@ -216,7 +216,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    comment: ''
+    comment: 125-e8
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: samp_rate
@@ -225,7 +225,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1272, 196.0]
+    coordinate: [1264, 188.0]
     rotation: 0
     state: true
 - name: analog_quadrature_demod_cf_0
@@ -241,7 +241,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1088, 204.0]
+    coordinate: [1080, 196.0]
     rotation: 0
     state: true
 - name: analog_rail_ff_0
@@ -541,7 +541,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [824, 196.0]
+    coordinate: [864, 180.0]
     rotation: 0
     state: true
 - name: hilbert_fc_0
@@ -700,7 +700,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1032, 68.0]
+    coordinate: [1176, 76.0]
     rotation: 180
     state: disabled
 - name: qtgui_time_sink_x_1
