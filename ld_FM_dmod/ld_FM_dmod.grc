@@ -206,9 +206,9 @@ blocks:
     comment: ''
     decim: '1'
     gain: '1'
-    high_cutoff_freq: 13.1e6
+    high_cutoff_freq: 13.8e6
     interp: '1'
-    low_cutoff_freq: 3.1e6
+    low_cutoff_freq: 3.4e6
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: samp_rate
@@ -758,4 +758,4 @@ connections:
 
 metadata:
   file_format: 1
-  grc_version: 3.10.2.0
+  grc_version: 3.10.3.0
