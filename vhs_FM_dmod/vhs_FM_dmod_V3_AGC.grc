@@ -177,6 +177,40 @@ blocks:
     coordinate: [1400, 436.0]
     rotation: 0
     state: enabled
+- name: analog_const_source_x_1_0_1_0
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: -.5
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1376, 676.0]
+    rotation: 180
+    state: enabled
+- name: analog_const_source_x_1_0_1_1
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '-1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1368, 636.0]
+    rotation: 180
+    state: enabled
 - name: analog_fm_deemph_0
   id: analog_fm_deemph
   parameters:
@@ -723,7 +757,7 @@ blocks:
     marker8: '-1'
     marker9: '-1'
     name: '""'
-    nconnections: '1'
+    nconnections: '3'
     size: '8092'
     srate: samp_rate
     stemplot: 'False'
@@ -763,7 +797,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1280, 508.0]
+    coordinate: [1304, 492.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_1_0
@@ -903,6 +937,8 @@ connections:
 - [analog_agc3_xx_0, '0', mmse_resampler_xx_0, '0']
 - [analog_const_source_x_1_0_0, '0', blocks_sub_xx_2, '1']
 - [analog_const_source_x_1_0_1, '0', blocks_sub_xx_1_0, '1']
+- [analog_const_source_x_1_0_1_0, '0', qtgui_time_sink_x_1, '2']
+- [analog_const_source_x_1_0_1_1, '0', qtgui_time_sink_x_1, '1']
 - [analog_fm_deemph_0, '0', blocks_sub_xx_1_0, '0']
 - [analog_quadrature_demod_cf_0, '0', analog_fm_deemph_0, '0']
 - [analog_rail_ff_0, '0', blocks_float_to_uchar_0, '0']
