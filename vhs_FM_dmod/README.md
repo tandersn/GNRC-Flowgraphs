@@ -14,9 +14,9 @@ These GNRC flowgraphs takes in an RF capture file from in .WAV or .FLAC formats 
 
 2. open the flowgraph, edit the following blocks:
 
-   i. path field of 'file source block'
-   ii. path field of 'file sink block' 
-   iii. source_sample_rate (this is the capture sample rate of source file. DO NOT change the variable samp_rate)
+   a. path field of 'file source block'
+   b. path field of 'file sink block' 
+   c. source_sample_rate (this is the capture sample rate of source file. DO NOT change the variable samp_rate)
 
 3. run the graph 
 
@@ -25,7 +25,7 @@ These GNRC flowgraphs takes in an RF capture file from in .WAV or .FLAC formats 
 
 5. Once you've achieved the best possible adjustment, annotate the values (screen shot, write down, etc. etc.)
 
-6. stop the graph, and update OFFSET Default Value and GAIN Default value to the numbers from step 5
+6. stop the graph, and update `OFFSET Default Value` and `GAIN Default value` to the numbers from step 5
 
 7. rerun the graph
 
