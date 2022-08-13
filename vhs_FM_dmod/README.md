@@ -10,31 +10,31 @@ These GNRC flowgraphs takes in an RF capture file from in .WAV or .FLAC formats 
 
 ## Steps to use V3_AGC:
 
-1. You'll need gnu radio companion packages installed and all dependencies
+- You'll need gnu radio companion packages installed and all dependencies
 
-2. open the flowgraph, edit the following blocks:
+- open the flowgraph, edit the following blocks:
 
-   a. path field of 'file source block'
-   b. path field of 'file sink block' 
-   c. source_sample_rate (this is the capture sample rate of source file. DO NOT change the variable samp_rate)
+   - path field of 'file source block'
+   - path field of 'file sink block' 
+   - source_sample_rate (this is the capture sample rate of source file. DO NOT change the variable samp_rate)
 
-3. run the graph 
+- run the graph 
 
-4. You need to use the sliders to adjust the GAIN and OFFSET to create a "clamped" signal:
+- You need to use the sliders to adjust the GAIN and OFFSET to create a "clamped" signal:
 ![pic1](https://raw.githubusercontent.com/tandersn/GNRC-Flowgraphs/main/z_images/adjust_gain_and_offset2.PNG)
 
-5. Once you've achieved the best possible adjustment, annotate the values (screen shot, write down, etc. etc.)
+- Once you've achieved the best possible adjustment, annotate the values (screen shot, write down, etc. etc.)
 
-6. stop the graph, and update `OFFSET Default Value` and `GAIN Default value` to the numbers from step 5
+- stop the graph, and update `OFFSET Default Value` and `GAIN Default value` to the numbers from step 5
 
-7. rerun the graph
+- rerun the graph
 
 ##NOTES
-1. for some captures, the FM Deemphasis parameter needs to be adjusted
-2. for some captures, the sample rate you think it is, might be a little off, adjust it until the HSYNC in the image is as vertical as you can get it 
-3. for some reason, the graph just stops after some amount of time
-4. this is for testing, research, and development, please don't assume it is a finished product
-5. there is most likely some things wrong
+- for some captures, the FM Deemphasis parameter needs to be adjusted
+- for some captures, the sample rate you think it is, might be a little off, adjust it until the HSYNC in the image is as vertical as you can get it 
+- for some reason, the graph just stops after some amount of time
+- this is for testing, research, and development, please don't assume it is a finished product
+- there is most likely some things wrong
 
 
 
