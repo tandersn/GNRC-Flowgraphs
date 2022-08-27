@@ -4,7 +4,7 @@ To use these graphs, you must put the source sample rate value in the correspond
 
 A few rounds of testing between Titan91 and I resulted in the creation of a flow graph to resample VHS captures (8 bit @ 40msps) to 8 bit @ 16msps with a low passfilter around 7.75mhz.
 
-The versions of these graphs have been updated to work with any source file sample rate, and different graphs for signed 16 bit (raw scaled ddd output), usigned 8 bit (cx card 8 bit mode), and any bit .WAV or .FAC file. 
+The versions of these graphs have been updated to work with any source file sample rate, and different graphs for signed 16 bit (raw scaled ddd output), usigned 8 bit (cx card 8 bit mode), and `any bit` .WAV or .FLAC file. 
 
 Obviously, not every possible situation could be tested, so YMMV, but this is what we found worked well, and preserved quality, and allowed for best conservation of space (the output file is then flac compressed).
 
