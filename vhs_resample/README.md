@@ -1,5 +1,6 @@
 # Graphs to resample (and low pass filter) VHS captures to 16msps
 
+To use these graphs, you must put the source sample rate value in the corresponding block in the graph, along with INFILE and OUTFILE.
 
 A few rounds of testing between Titan91 and I resulted in the creation of a flow graph to resample VHS captures (8 bit @ 40msps) to 8 bit @ 16msps with a low passfilter around 7.75mhz.
 
