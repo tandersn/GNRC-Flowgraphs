@@ -4,7 +4,7 @@ This GNRC flowgraph takes in a .tbc file from ld-decode or vhs-decode and shows 
 
 ## Steps to use:
 
-You'll gnu radio companion packages installed and all dependencies
+You'll need gnu radio companion packages installed and all dependencies
 
 Open the flowgraph, edit the path field of 'file source block' and 'file sink block' (if you want to save a file)
 
