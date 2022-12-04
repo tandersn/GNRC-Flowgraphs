@@ -37,7 +37,7 @@ blocks:
   id: variable
   parameters:
     comment: do not change
-    value: 40e6
+    value: 16e6
   states:
     bus_sink: false
     bus_source: false
@@ -49,7 +49,7 @@ blocks:
   id: variable
   parameters:
     comment: 5fsc = 17897726
-    value: '28636363'
+    value: 54e6
   states:
     bus_sink: false
     bus_source: false
@@ -80,7 +80,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    const: '127'
+    const: '128'
     maxoutbuf: '0'
     minoutbuf: '0'
     type: float
@@ -108,6 +108,23 @@ blocks:
     coordinate: [616, 172.0]
     rotation: 0
     state: true
+- name: analog_rail_ff_0_0
+  id: analog_rail_ff
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    hi: '1'
+    lo: '-1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [688, 316.0]
+    rotation: 0
+    state: true
 - name: blocks_add_const_vxx_0
   id: blocks_add_const_vxx
   parameters:
@@ -123,7 +140,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [712, 396.0]
+    coordinate: [848, 388.0]
     rotation: 0
     state: true
 - name: blocks_complex_to_real_0
@@ -139,7 +156,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1168, 216.0]
+    coordinate: [544, 376.0]
     rotation: 0
     state: true
 - name: blocks_divide_xx_0
@@ -167,7 +184,7 @@ blocks:
     alias: ''
     append: 'False'
     comment: ''
-    file: /tmp/result.r8
+    file: /VHS/captures/spinning/Sc00b_771hf_m1uf100otOPA657_smOrnBNC_ex49rtt_mZipG54cx1dxvx1_cat_16resamp.r8
     type: byte
     unbuffered: 'False'
     vlen: '1'
@@ -175,7 +192,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1200, 380.0]
+    coordinate: [1336, 372.0]
     rotation: 0
     state: enabled
 - name: blocks_file_source_0
@@ -185,7 +202,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: input.r8
+    file: /VHS/captures/spinning/Sc00b_771hf_m1uf100otOPA657_smOrnBNC_ex49rtt_mZipG54cx1dxvx1_cat.r8
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -197,7 +214,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [48, 116.0]
+    coordinate: [16, 116.0]
     rotation: 0
     state: true
 - name: blocks_float_to_uchar_0
@@ -212,7 +229,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1024, 400.0]
+    coordinate: [1160, 392.0]
     rotation: 0
     state: true
 - name: blocks_multiply_const_vxx_0
@@ -230,7 +247,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [856, 396.0]
+    coordinate: [992, 388.0]
     rotation: 0
     state: enabled
 - name: blocks_sub_xx_0
@@ -278,8 +295,8 @@ blocks:
     gain: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
-    nthreads: '1'
-    samp_rate: samp_rate
+    nthreads: '20'
+    samp_rate: source_samp_rate
     type: fff
     width: '100000'
     win: window.WIN_HAMMING
@@ -287,7 +304,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [296, 340.0]
+    coordinate: [792, 124.0]
     rotation: 0
     state: enabled
 - name: hilbert_fc_0
@@ -305,7 +322,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [768, 180.0]
+    coordinate: [200, 356.0]
     rotation: 0
     state: enabled
 - name: mmse_resampler_xx_0
@@ -323,7 +340,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [944, 184.0]
+    coordinate: [352, 416.0]
     rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
@@ -344,7 +361,7 @@ blocks:
     autoscale: 'False'
     average: '1.0'
     axislabels: 'True'
-    bw: samp_rate
+    bw: source_samp_rate
     color1: '"blue"'
     color10: '"dark blue"'
     color2: '"red"'
@@ -404,27 +421,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1312, 84.0]
-    rotation: 0
-    state: true
-- name: rational_resampler_xxx_0
-  id: rational_resampler_xxx
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    decim: '5'
-    fbw: '0'
-    interp: '2'
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    taps: '[]'
-    type: fff
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [504, 372.0]
+    coordinate: [1216, 84.0]
     rotation: 0
     state: enabled
 - name: virtual_sink_0
@@ -437,7 +434,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1328, 212.0]
+    coordinate: [1256, 172.0]
     rotation: 0
     state: true
 - name: virtual_source_0
@@ -450,29 +447,29 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [120, 396.0]
+    coordinate: [56, 396.0]
     rotation: 0
     state: true
 
 connections:
 - [analog_const_source_x_0, '0', blocks_divide_xx_0, '1']
 - [analog_const_source_x_0_0, '0', blocks_sub_xx_0, '1']
-- [analog_rail_ff_0, '0', hilbert_fc_0, '0']
+- [analog_rail_ff_0, '0', filter_fft_low_pass_filter_0, '0']
+- [analog_rail_ff_0_0, '0', blocks_add_const_vxx_0, '0']
 - [blocks_add_const_vxx_0, '0', blocks_multiply_const_vxx_0, '0']
-- [blocks_complex_to_real_0, '0', qtgui_freq_sink_x_0, '0']
-- [blocks_complex_to_real_0, '0', virtual_sink_0, '0']
+- [blocks_complex_to_real_0, '0', analog_rail_ff_0_0, '0']
 - [blocks_divide_xx_0, '0', analog_rail_ff_0, '0']
 - [blocks_file_source_0, '0', blocks_uchar_to_float_0, '0']
 - [blocks_float_to_uchar_0, '0', blocks_file_sink_0_0, '0']
 - [blocks_multiply_const_vxx_0, '0', blocks_float_to_uchar_0, '0']
 - [blocks_sub_xx_0, '0', blocks_divide_xx_0, '0']
 - [blocks_uchar_to_float_0, '0', blocks_sub_xx_0, '0']
-- [filter_fft_low_pass_filter_0, '0', rational_resampler_xxx_0, '0']
+- [filter_fft_low_pass_filter_0, '0', qtgui_freq_sink_x_0, '0']
+- [filter_fft_low_pass_filter_0, '0', virtual_sink_0, '0']
 - [hilbert_fc_0, '0', mmse_resampler_xx_0, '0']
 - [mmse_resampler_xx_0, '0', blocks_complex_to_real_0, '0']
-- [rational_resampler_xxx_0, '0', blocks_add_const_vxx_0, '0']
-- [virtual_source_0, '0', filter_fft_low_pass_filter_0, '0']
+- [virtual_source_0, '0', hilbert_fc_0, '0']
 
 metadata:
   file_format: 1
-  grc_version: 3.10.3.0
+  grc_version: 3.10.4.0
