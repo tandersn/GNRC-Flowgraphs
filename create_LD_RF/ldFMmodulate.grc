@@ -266,7 +266,7 @@ blocks:
     minoutbuf: '0'
     samp_rate: source_samp_rate
     type: fir_filter_fff
-    width: 100e3
+    width: 80e3
     win: window.WIN_HAMMING
   states:
     bus_sink: false
