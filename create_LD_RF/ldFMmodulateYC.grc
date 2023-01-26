@@ -455,9 +455,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1232, 1028.0]
+    coordinate: [1152, 948.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_file_source_0_0_0
   id: blocks_file_source
   parameters:
@@ -729,6 +729,28 @@ blocks:
     coordinate: [480, 720.0]
     rotation: 0
     state: enabled
+- name: blocks_wavfile_sink_0
+  id: blocks_wavfile_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    bits_per_sample1: FORMAT_PCM_16
+    bits_per_sample2: FORMAT_PCM_16
+    bits_per_sample3: FORMAT_VORBIS
+    bits_per_sample4: FORMAT_PCM_16
+    comment: ''
+    file: /tmp/ldFM_YC_version.wav
+    format: FORMAT_WAV
+    nchan: '1'
+    samp_rate: '40000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 1028.0]
+    rotation: 0
+    state: true
 - name: filter_fft_low_pass_filter_0
   id: filter_fft_low_pass_filter
   parameters:
@@ -1206,6 +1228,7 @@ connections:
 - [blocks_add_xx_0_0_0, '0', blocks_sub_xx_0_0, '0']
 - [blocks_complex_to_real_0, '0', blocks_file_sink_0, '0']
 - [blocks_complex_to_real_0, '0', blocks_null_sink_1, '0']
+- [blocks_complex_to_real_0, '0', blocks_wavfile_sink_0, '0']
 - [blocks_complex_to_real_0, '0', qtgui_freq_sink_x_0, '0']
 - [blocks_complex_to_real_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_deinterleave_0_0, '0', blocks_add_xx_0_0, '0']
