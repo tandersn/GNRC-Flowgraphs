@@ -762,7 +762,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1192, 544.0]
+    coordinate: [1232, 544.0]
     rotation: 0
     state: enabled
 - name: blocks_stream_to_vector_0
