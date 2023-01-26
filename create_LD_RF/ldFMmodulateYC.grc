@@ -1043,7 +1043,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [80, 108.0]
+    coordinate: [80, 124.0]
     rotation: 0
     state: true
 - name: qtgui_freq_sink_x_0
