@@ -38,7 +38,14 @@ blocks:
   parameters:
     comment: '0 = Add white lines to the VBI to calculate wSNR
 
-      1 = Leave source vdieo lines in tact'
+      1 = Leave source vdieo lines in tact
+
+
+      NOTE: Decode will be off if there are no white lines
+
+      in the VBI, so if your source doesn''t have it, then select
+
+      to add white lines.'
     value: '0'
   states:
     bus_sink: false
