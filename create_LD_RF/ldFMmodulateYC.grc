@@ -233,7 +233,7 @@ blocks:
     beta: '6.76'
     comment: maybe better without these
     decim: '1'
-    gain: '1'
+    gain: '.85'
     high_cutoff_freq: 14e6
     interp: '1'
     low_cutoff_freq: 3.5e6
@@ -910,7 +910,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1072, 1108.0]
+    coordinate: [1072, 1156.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
