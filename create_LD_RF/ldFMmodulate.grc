@@ -99,7 +99,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1000, 180.0]
+    coordinate: [1000, 276.0]
     rotation: 180
     state: enabled
 - name: analog_const_source_x_0_0_0
@@ -116,7 +116,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1008, 356.0]
+    coordinate: [1008, 452.0]
     rotation: 180
     state: enabled
 - name: analog_const_source_x_1
@@ -133,7 +133,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 180.0]
+    coordinate: [808, 276.0]
     rotation: 180
     state: enabled
 - name: analog_const_source_x_1_0
@@ -150,7 +150,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [816, 356.0]
+    coordinate: [816, 452.0]
     rotation: 180
     state: enabled
 - name: analog_fm_preemph_0
@@ -183,7 +183,7 @@ blocks:
       .177 and 8.66 shift worked and close'
     maxoutbuf: '0'
     minoutbuf: '0'
-    sensitivity: '.177'
+    sensitivity: '.196'
   states:
     bus_sink: false
     bus_source: false
@@ -205,7 +205,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1112, 108.0]
+    coordinate: [1112, 204.0]
     rotation: 0
     state: enabled
 - name: analog_rail_ff_1_0
@@ -222,7 +222,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1120, 284.0]
+    coordinate: [1120, 380.0]
     rotation: 0
     state: enabled
 - name: band_pass_filter_0
@@ -259,9 +259,9 @@ blocks:
     comment: ''
     decim: '1'
     gain: '.5'
-    high_cutoff_freq: (3.579545e6 + .65e6)
+    high_cutoff_freq: (3.579545e6 + .55e6)
     interp: '1'
-    low_cutoff_freq: (3.579545e6 - .65e6)
+    low_cutoff_freq: (3.579545e6 - .55e6)
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: source_samp_rate
@@ -272,7 +272,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [280, 508.0]
+    coordinate: [208, 572.0]
     rotation: 0
     state: true
 - name: blocks_add_xx_0
@@ -290,7 +290,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [592, 488.0]
+    coordinate: [560, 576.0]
     rotation: 0
     state: true
 - name: blocks_add_xx_0_0
@@ -308,7 +308,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [648, 136.0]
+    coordinate: [648, 232.0]
     rotation: 0
     state: enabled
 - name: blocks_add_xx_0_0_0
@@ -326,7 +326,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [656, 304.0]
+    coordinate: [656, 400.0]
     rotation: 0
     state: enabled
 - name: blocks_complex_to_real_0
@@ -361,7 +361,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [408, 112.0]
+    coordinate: [408, 208.0]
     rotation: 0
     state: enabled
 - name: blocks_deinterleave_0_0_0
@@ -380,7 +380,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 280.0]
+    coordinate: [416, 376.0]
     rotation: 0
     state: enabled
 - name: blocks_delay_0
@@ -399,7 +399,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [336, 424.0]
+    coordinate: [264, 488.0]
     rotation: 0
     state: true
 - name: blocks_divide_xx_0_0
@@ -417,7 +417,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [976, 104.0]
+    coordinate: [976, 200.0]
     rotation: 0
     state: enabled
 - name: blocks_divide_xx_0_0_0
@@ -435,7 +435,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [984, 272.0]
+    coordinate: [984, 368.0]
     rotation: 0
     state: enabled
 - name: blocks_file_sink_0
@@ -445,7 +445,7 @@ blocks:
     alias: ''
     append: 'False'
     comment: ''
-    file: /tmp/fmencodeldFiltC.rf
+    file: /tmp/fmEncFiltC.rf
     type: float
     unbuffered: 'False'
     vlen: '1'
@@ -475,7 +475,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 124.0]
+    coordinate: [8, 212.0]
     rotation: 0
     state: enabled
 - name: blocks_file_source_0_0_0_0
@@ -497,7 +497,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [24, 292.0]
+    coordinate: [8, 356.0]
     rotation: 0
     state: enabled
 - name: blocks_freqshift_cc_0
@@ -506,7 +506,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    freq: 8.66e6
+    freq: 8.67e6
     maxoutbuf: '0'
     minoutbuf: '0'
     sample_rate: samp_rate
@@ -532,7 +532,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [496, 204.0]
+    coordinate: [496, 300.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_const_vxx_0_0_0
@@ -550,7 +550,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [504, 372.0]
+    coordinate: [504, 468.0]
     rotation: 0
     state: enabled
 - name: blocks_null_sink_0
@@ -622,7 +622,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 96.0]
+    coordinate: [808, 192.0]
     rotation: 0
     state: enabled
 - name: blocks_sub_xx_0_0
@@ -640,7 +640,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [816, 264.0]
+    coordinate: [816, 360.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle_0_0
@@ -674,7 +674,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [240, 112.0]
+    coordinate: [240, 208.0]
     rotation: 0
     state: enabled
 - name: blocks_uchar_to_float_0_0_0
@@ -689,7 +689,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [248, 280.0]
+    coordinate: [248, 376.0]
     rotation: 0
     state: enabled
 - name: blocks_vector_to_stream_0
@@ -707,7 +707,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [472, 704.0]
+    coordinate: [480, 720.0]
     rotation: 0
     state: enabled
 - name: filter_fft_low_pass_filter_0
@@ -717,7 +717,7 @@ blocks:
     alias: ''
     beta: '6.76'
     comment: maybe better without these
-    cutoff_freq: 4.5e6
+    cutoff_freq: 4.2e6
     decim: '1'
     gain: '1'
     maxoutbuf: '0'
@@ -752,6 +752,21 @@ blocks:
     coordinate: [632, 776.0]
     rotation: 0
     state: enabled
+- name: note_0
+  id: note
+  parameters:
+    alias: ''
+    comment: ffmpeg -i thx.avi -an -vf "scale=758:480,pad=758:486:0:3" -vcodec rawvideo
+      -pix_fmt yuv444p16 -f rawvideo - | ld-chroma-encoder -p yuv -f NTSC - PADiceagethxY.tbc
+      PADiceagethxC.tbc
+    note: Example command from a DVD source
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [32, 116.0]
+    rotation: 0
+    state: true
 - name: qtgui_freq_sink_x_0
   id: qtgui_freq_sink_x
   parameters:
@@ -832,7 +847,7 @@ blocks:
     bus_structure: null
     coordinate: [1072, 1108.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: qtgui_time_sink_x_0
   id: qtgui_time_sink_x
   parameters:
@@ -1024,9 +1039,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [800, 604.0]
+    coordinate: [1320, 636.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: virtual_sink_0
   id: virtual_sink
   parameters:
@@ -1037,7 +1052,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1328, 116.0]
+    coordinate: [1328, 212.0]
     rotation: 0
     state: true
 - name: virtual_sink_0_0
@@ -1063,7 +1078,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1336, 292.0]
+    coordinate: [1336, 388.0]
     rotation: 0
     state: true
 - name: virtual_sink_0_1_0
@@ -1076,7 +1091,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [800, 500.0]
+    coordinate: [1320, 532.0]
     rotation: 0
     state: true
 - name: virtual_source_0
@@ -1115,7 +1130,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [96, 460.0]
+    coordinate: [24, 524.0]
     rotation: 0
     state: true
 - name: virtual_source_0_2
@@ -1128,7 +1143,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [96, 564.0]
+    coordinate: [24, 628.0]
     rotation: 0
     state: true
 

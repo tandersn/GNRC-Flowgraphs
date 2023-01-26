@@ -12,3 +12,6 @@ The source here is DVD, but most any video can be used.
 
 
 This graph is highly experimental and just for fun.  
+
+
+Currently NTSC ONLY
