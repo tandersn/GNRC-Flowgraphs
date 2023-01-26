@@ -233,7 +233,7 @@ blocks:
     beta: '6.76'
     comment: maybe better without these
     decim: '1'
-    gain: '.85'
+    gain: '1'
     high_cutoff_freq: 14e6
     interp: '1'
     low_cutoff_freq: 3.5e6
@@ -344,7 +344,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [840, 984.0]
+    coordinate: [832, 992.0]
     rotation: 0
     state: enabled
 - name: blocks_deinterleave_0_0
@@ -440,24 +440,6 @@ blocks:
     coordinate: [984, 368.0]
     rotation: 0
     state: enabled
-- name: blocks_file_sink_0
-  id: blocks_file_sink
-  parameters:
-    affinity: ''
-    alias: ''
-    append: 'False'
-    comment: ''
-    file: /tmp/ldFM_YC_version.rf
-    type: float
-    unbuffered: 'False'
-    vlen: '1'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1152, 948.0]
-    rotation: 0
-    state: disabled
 - name: blocks_file_source_0_0_0
   id: blocks_file_source
   parameters:
@@ -519,6 +501,24 @@ blocks:
     coordinate: [400, 956.0]
     rotation: 0
     state: enabled
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '.85'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1000, 988.0]
+    rotation: 0
+    state: true
 - name: blocks_multiply_const_vxx_0_0
   id: blocks_multiply_const_vxx
   parameters:
@@ -586,7 +586,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [872, 1080.0]
+    coordinate: [968, 944.0]
     rotation: 180
     state: true
 - name: blocks_stream_demux_0
@@ -763,7 +763,7 @@ blocks:
     gain: '1'
     maxoutbuf: '0'
     minoutbuf: '0'
-    nthreads: '1'
+    nthreads: '5'
     samp_rate: samp_rate
     type: fff
     width: 1e5
@@ -1009,7 +1009,7 @@ blocks:
     bus_structure: null
     coordinate: [1376, 940.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: qtgui_time_sink_x_1
   id: qtgui_time_sink_x
   parameters:
@@ -1226,11 +1226,7 @@ connections:
 - [blocks_add_xx_0, '0', virtual_sink_0_1_0, '0']
 - [blocks_add_xx_0_0, '0', blocks_sub_xx_0, '0']
 - [blocks_add_xx_0_0_0, '0', blocks_sub_xx_0_0, '0']
-- [blocks_complex_to_real_0, '0', blocks_file_sink_0, '0']
-- [blocks_complex_to_real_0, '0', blocks_null_sink_1, '0']
-- [blocks_complex_to_real_0, '0', blocks_wavfile_sink_0, '0']
-- [blocks_complex_to_real_0, '0', qtgui_freq_sink_x_0, '0']
-- [blocks_complex_to_real_0, '0', qtgui_time_sink_x_0, '0']
+- [blocks_complex_to_real_0, '0', blocks_multiply_const_vxx_0, '0']
 - [blocks_deinterleave_0_0, '0', blocks_add_xx_0_0, '0']
 - [blocks_deinterleave_0_0, '1', blocks_multiply_const_vxx_0_0, '0']
 - [blocks_deinterleave_0_0_0, '0', blocks_add_xx_0_0_0, '0']
@@ -1241,6 +1237,10 @@ connections:
 - [blocks_file_source_0_0_0, '0', blocks_uchar_to_float_0_0, '0']
 - [blocks_file_source_0_0_0_0, '0', blocks_uchar_to_float_0_0_0, '0']
 - [blocks_freqshift_cc_0, '0', band_pass_filter_0, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_null_sink_1, '0']
+- [blocks_multiply_const_vxx_0, '0', blocks_wavfile_sink_0, '0']
+- [blocks_multiply_const_vxx_0, '0', qtgui_freq_sink_x_0, '0']
+- [blocks_multiply_const_vxx_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_multiply_const_vxx_0_0, '0', blocks_add_xx_0_0, '1']
 - [blocks_multiply_const_vxx_0_0_0, '0', blocks_add_xx_0_0_0, '1']
 - [blocks_stream_demux_0, '0', blocks_vector_to_stream_0, '0']
