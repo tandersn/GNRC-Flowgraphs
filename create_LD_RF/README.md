@@ -15,7 +15,7 @@ This graph is highly experimental and just for fun.
 
 After running the graph, you can decode the file like it was an LD RF capture: 
 
-`ld-decode ldFM_YC_version.wav out/ldFM_YC_version.wav -f 40 --daa --noEFM --NTSCJ`
+`ld-decode ldFM_YC_version.wav out/ldFM_YC_version.wav -f 40 --daa --noEFM`
 
 
 Currently NTSC ONLY
