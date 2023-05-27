@@ -2,11 +2,9 @@
 
 DISCLAIMER:  Color is not yet supported.
 
-vhs_fm_dmod.grc is a simplified version that can be used to see the VHS RF signal in real time from /dev/cxadc0, but can also read a .wav file.
+vhs_fm_dmod_V3.grc can be used to see the VHS RF signal in real time from /dev/cxadc0, but can also read a .wav or .flac file. It can also be used to generate an output file for FL2K (signed 8) or my `alignsyncs` script  (unsigned 8). 
 
-vhs_fm_dmod_V3_AGC.grc is a more complex graph, which is used to generate an output file for FL2K or my `alignsyncs` script. 
-
-These GNRC flowgraphs takes in an RF capture file from in .WAV or .FLAC formats (or directly from /dev/cxadc0 for simplified graph) and FM demodulates them. The graph will display a rough image of the vidoe as well.  
+These GNRC flowgraphs takes in an RF capture file from in .WAV or .FLAC formats (or directly from /dev/cxadc0 if you enable the blocks) and FM demodulates them. The graph will display a rough image of the vidoe as well.  
 
 ## Steps to use V3_AGC:
 
