@@ -104,7 +104,7 @@ blocks:
     alias: ''
     append: 'False'
     comment: ''
-    file: /VHS/captures/hifi/ishort_hifi.s16
+    file: /VHS/captures/hifi/ishort_hifi.complex16
     type: short
     unbuffered: 'False'
     vlen: '1'
