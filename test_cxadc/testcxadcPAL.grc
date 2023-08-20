@@ -253,10 +253,10 @@ blocks:
   id: video_sdl_sink
   parameters:
     affinity: ''
-    alias: ''
+    alias: VIDEO
     comment: ''
-    display_height: '480'
-    display_width: '640'
+    display_height: '600'
+    display_width: '800'
     fps: '0'
     height: '625'
     num_channels: '1'
