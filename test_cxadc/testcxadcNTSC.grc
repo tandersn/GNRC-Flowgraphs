@@ -205,7 +205,7 @@ blocks:
     marker7: '-1'
     marker8: '-1'
     marker9: '-1'
-    name: '""'
+    name: '"Time Sink"'
     nconnections: '1'
     size: '1024'
     srate: samp_rate
