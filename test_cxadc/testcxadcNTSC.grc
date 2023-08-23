@@ -536,8 +536,8 @@ blocks:
     affinity: ''
     alias: VIDEO
     comment: ''
-    display_height: '600'
-    display_width: '800'
+    display_height: '525'
+    display_width: '910'
     fps: '0'
     height: '525'
     num_channels: '1'
