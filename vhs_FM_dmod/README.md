@@ -28,7 +28,8 @@ These GNRC flowgraphs takes in an RF capture file from in .WAV or .FLAC formats 
 - rerun the graph
 
 - the video sink will output something like this:  https://www.youtube.com/watch?v=vcUB54ajYsM
-
+ 
+- [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/vcUB54ajYsM/0.jpg)](https://www.youtube.com/watch?v=vcUB54ajYsM)
 
 ##NOTES
 - for some captures, the FM Deemphasis parameter needs to be adjusted
